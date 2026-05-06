@@ -8,7 +8,7 @@
   </head>
   <body>
     <main class="calculator">
-      <h1>Calculadora básica</h1>
+      <h1>modoficacion exitosa</h1>
 
       <form id="calcForm">
         <input id="a" type="number" step="any" placeholder="Número A" required>
