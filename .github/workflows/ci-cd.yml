@@ -19,6 +19,15 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Debug environment
+        run: |
+          echo "--- python info ---"
+          python -c "import sys, os; print('python', sys.version); print('sys.path:', sys.path); print('cwd:', os.getcwd())"
+          echo "--- repo files ---"
+          ls -la
+          echo "--- root listing ---"
+          python -c "import pkgutil; print('packages:', [m.name for m in pkgutil.iter_modules()][:20])"
+
       - name: Run unit tests
         run: |
           python -m unittest discover -v
